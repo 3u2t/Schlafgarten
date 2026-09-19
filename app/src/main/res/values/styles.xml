@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.Schlafgarten" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#101916</item>
+        <item name="android:navigationBarColor">#101916</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">#A6E6BB</item>
+    </style>
+</resources>

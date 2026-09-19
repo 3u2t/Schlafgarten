@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "23e1405a8ba976ba5dcb3dc0dc32b7e0",
+    "entities": [
+      {
+        "tableName": "sleep_entries",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wakeDate` TEXT NOT NULL, `bedTime` TEXT NOT NULL, `wakeTime` TEXT NOT NULL, `quality` INTEGER NOT NULL, `note` TEXT NOT NULL, PRIMARY KEY(`wakeDate`))",
+        "fields": [
+          {
+            "fieldPath": "wakeDate",
+            "columnName": "wakeDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bedTime",
+            "columnName": "bedTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wakeTime",
+            "columnName": "wakeTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quality",
+            "columnName": "quality",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "note",
+            "columnName": "note",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "wakeDate"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '23e1405a8ba976ba5dcb3dc0dc32b7e0')"
+    ]
+  }
+}
